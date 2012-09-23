@@ -1,0 +1,77 @@
+<!DOCTYPE html{% if html.showRtlDir %} dir="rtl"{% endif %}>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Content-Type" content="text/html; charset={{ settings.characterSet }}" />
+        <title>{{ head.pageTitle }}</title>
+        <meta name="description" content="{{ head.showPrsonalMessages }}" />
+{% if head.metaKeywords is not empty %}
+        <meta name="keywords" content="{{ head.metaKeywords }}" />
+{% endif %}
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{{ settings.themeUrl }}/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="{{ settings.themeUrl }}/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="{{ settings.themeUrl }}/css/main.css">
+        <!--<link rel="stylesheet" href="{{ settings.themeUrl }}/css/index{{ settings.themeVariant }}.css?fin20" />-->
+{% if html.showRtlDir %}
+        <link rel="stylesheet" type="text/css" href="{{ settings.themeUrl }}/css/rtl.css" />
+{% endif %}
+{% if head.robotNoIndex %}
+        <meta name="robots" content="noindex" />
+{% endif %}
+{% if head.canonicalUrl %}
+        <link rel="canonical" href="{{ head.canonicalUrl }}" />
+{% endif %}
+
+        <script src="{{ settings.themeUrl }}/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+
+        <script type="text/javascript" src="{{ settings.defaultThemeUrl }}/scripts/script.js?fin20"></script>
+        <script type="text/javascript" src="{{ settings.themeUrl }}/js/theme.js?fin20"></script>
+        <script type="text/javascript"><!-- // --><![CDATA[
+            var smf_theme_url = "{{ settings.themeUrl }}";
+            var smf_default_theme_url = "{{ settings.defaultThemeUrl }}";
+            var smf_images_url = "{{ settings.imagesUrl }}";
+            var smf_scripturl = "{{ settings.scriptUrl }}";
+            var smf_iso_case_folding = {{ ((settings.isoCaseFolding) ? 'true' : 'false')|raw }};
+            var smf_charset = "{{ settings.characterSet }}";
+{% if head.showPMPopup %}
+            var fPmPopup = function ()
+            {
+                if (confirm("{{ txt.showPrsonalMessages}}"))
+                    window.open(smf_prepareScriptUrl(smf_scripturl) + "action=pm");
+            }
+            addLoadEvent(fPmPopup);
+{% endif %}
+            var ajax_notification_text = "{{ txt.ajax_in_progress }}";
+            var ajax_notification_cancel_text = "{{ txt.modify_cancel }}";
+        // ]]></script>
+        <link rel="help" href="{{ settings.scriptUrl }}?action=help" />
+        <link rel="search" href="{{ settings.scriptUrl }}?action=search" />
+        <link rel="contents" href="{{ settings.scriptUrl }}" />
+{% if head.showRss %}
+        <link rel="alternate" type="application/rss+xml" title="{{ head.forumName }} - {{ txt.rss }}" href="{{ settings.scriptUrl }}?type=rss;action=.xml" />
+{% endif %}
+{% if head.currentTopic is not empty %}
+        <link rel="prev" href="{{ settings.scriptUrl }}?topic={{ head.currentTopic }}.0;prev_next=prev" />
+        <link rel="next" href="{{ settings.scriptUrl }}?topic={{ head.currentTopic }}.0;prev_next=next" />
+{% endif %}
+{% if head.currentBoard is not empty %}
+        <link rel="index" href="{{ settings.scriptUrl }}?board={{ head.currentBoard }}.0" />
+{% endif %}
+{% autoescape false %}
+    {% if head.headers is not empty %}
+        {{ head.headers }}
+    {% endif %}
+{% endautoescape %}
+    </head>
+    <body>

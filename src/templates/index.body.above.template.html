@@ -1,0 +1,124 @@
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        <div class="webring">
+            <ul>
+                <li class="first"><a href="http://www.tiedtheleader.com" target="_blank" class="first">Blog</a></li>
+                <li class="active"><a href="http://forum.tiedtheleader.com" target="_blank" class="active">Forum</a></li>
+                <li><a href="http://network.tiedtheleader.com" target="_blank">Network</a></li>
+                <li><a href="http://clan.tiedtheleader.com" target="_blank">Clan</a></li>
+                <li class="last"><a href="http://foundation.tiedtheleader.com" target="_blank" class="last">Foundation</a></li>
+            </ul>
+        </div>
+{% if content.showForumWidth %}
+		<div id="wrapper" style="width: {{ content.forumWidth }}">
+{% endif %}
+			<div id="header">
+				<div class="frame">
+					<div id="top_section">
+						<h1 class="forumtitle">
+							<a href="{{ settings.scriptUrl }}">{% if content.showHeaderLogo %}<img src="{{ content.headerLogo }}" alt="{{ content.forumName }}" />{% else %}{{ content.forumName }}{% endif %}</a>
+						</h1>
+						<img id="upshrink" src="{{ settings.imagesUrl }}/upshrink.png" alt="*" title="{{ txt.upshrinkDescription }}" style="display: none;" />
+{% if content.showSiteSlogan %}
+						<div id="siteslogan" class="floatright">{{ content.siteSlogan }}</div>
+{%  else %}
+						<img id="smflogo" src="{{ settings.imagesUrl }}/smflogo.png" alt="Simple Machines Forum" title="Simple Machines Forum" />
+{%  endif %}
+					</div>
+					<div id="upper_section" class="middletext"{% if content.isHeaderCollapsed %} style="display: none;"{% endif %}>
+						<div class="user">
+{% if content.isUserLoggedIn %}
+	{% if content.showAvatar %}
+							<p class="avatar">{% autoescape false %}{{ content.avatarImageHtml }}{% endautoescape %}</p>
+	{% endif %}
+							<ul class="reset">
+								<li class="greeting">{{ txt.hello }} <span>{{ content.username }}</span></li>
+								<li><a href="{{ settings.scriptUrl }}?action=unread">{{ txt.unreadTopics }}</a></li>
+								<li><a href="{{ settings.scriptUrl }}?action=unreadreplies">{{ txt.unreadReplies }}</a></li>
+	{% if content.isInMaintenanceMode and content.isAdmin %}
+								<li class="notice">{{ txt.maintenanceModeOn }}</li>
+	{% endif %}
+	{% if content.unapprovedMemberCount > 0 %}
+								<li>{{ txt.approvalMessagePrefix }} <a href="{{ settings.scriptUrl }}?action=admin;area=viewmembers;sa=browse;type=approve">{{ txt.approvalMessageCount }}</a> {{ txt.approvalMessageSuffix }}</li>
+	{% endif %}
+	{% if content.showModReports and content.modReportCount > 0 %}
+								<li><a href="{{ settings.scriptUrl }}?action=moderate;area=reports">{{ content.moderationReportsWaiting }}</a></li>
+	{% endif %}
+								<li>{{ content.currentTime }}</li>
+							</ul>
+{% elseif content.showLoginBar %}
+						<script type="text/javascript" src="{{ settings.defaultThemeUrl }}/scripts/sha1.js"></script>
+						<form id="guest_form" action="{{ settings.scriptUrl }}?action=login2" method="post" accept-charset="{{ settings.characterSet }}"{% if not content.disableLoginHashing %} onsubmit="hashLoginPassword(this, \'{{ content.sessionId }}\');"{% endif %}>
+							<div class="info">{{ content.welcomeGuest }}</div>
+							<input type="text" name="user" size="10" class="input_text" />
+							<input type="password" name="passwrd" size="10" class="input_password" />
+							<select name="cookielength">
+								<option value="60">{{ txt.oneHour }}</option>
+								<option value="1440">{{ txt.oneDay }}</option>
+								<option value="10080">{{ txt.oneWeek }}</option>
+								<option value="43200">{{ txt.oneMonth }}</option>
+								<option value="-1" selected="selected">{{ txt.forever }}</option>
+							</select>
+							<input type="submit" value="{{ txt.login }}" class="button_submit" /><br />
+							<div class="info">{{ txt.quickLoginDescription }}</div>';
+	{% if content.showOpenID %}
+							<br /><input type="text" name="openid_identifier" id="openid_url" size="25" class="input_text openid_login" />
+	{% endif %}
+							<input type="hidden" name="hash_passwrd" value="" />
+						</form>
+{% endif %}
+					</div>
+					<div class="news normaltext">
+						<form id="search_form" action="', $scripturl, '?action=search2" method="post" accept-charset="', $context['character_set'], '">
+							<input type="text" name="search" value="" class="input_text" />&nbsp;
+							<input type="submit" name="submit" value="{{ txt.search }}" class="button_submit" />
+							<input type="hidden" name="advanced" value="0" />
+{% if content.currentTopidID > 0 %}
+							<input type="hidden" name="topic" value="{{ content.currentTopidID }}" />
+{% elseif content.currentBoardID > 0 %}
+							<input type="hidden" name="brd[{{ content.currentBoardID }}]" value="{{ content.currentBoardID }}" />
+{% endif %}
+						</form>
+{% if settings.isNewsEnabled %}
+						<h2>{{ txt.news }}: </h2>
+						<p>{% autoescape false %}{{ content.newslineHtml }}{% endautoescape %}</p>
+{% endif %}
+					</div>
+				</div>
+				<br class="clear" />
+				<script type="text/javascript"><!-- // --><![CDATA[
+var oMainHeaderToggle = new smc_Toggle({
+	bToggleEnabled: true,
+	bCurrentlyCollapsed: {{ ((content.isHeaderCollapsed) ? 'true' : 'false')|raw }},
+	aSwappableContainers: [
+		'upper_section'
+	],
+	aSwapImages: [
+		{
+			sId: 'upshrink',
+			srcExpanded: smf_images_url + '/upshrink.png',
+			altExpanded: '{{ txt.upshrinkDescription|e('js') }}',
+			srcCollapsed: smf_images_url + '/upshrink2.png',
+			altCollapsed: '{{ txt.upshrinkDescription|e('js') }}'
+		}
+	],
+	oThemeOptions: {
+		bUseThemeSettings: {{ ((not content.isGuest) ? 'true' : 'false')|raw }},
+		sOptionName: 'collapse_header',
+		sSessionVar: '{{ content.sessionVar|e('js') }}',
+		sSessionId: '{{ content.sessionId|e('js') }}'
+	},
+	oCookieOptions: {
+		bUseCookie: {{ ((content.isGuest) ? 'true' : 'false')|raw }},
+		sCookieName: 'upshrink'
+	}
+}); // ]]></script>
+				{% autoescape false %}{{ content.templateMenu }}{% endautoescape %}
+				<br class="clear" />
+			</div>
+		</div>
+		<div id="content_section">
+			<div class="frame">
+				<div id="main_content_section">
+					{% autoescape false %}{{ content.templateLinktree }}{% endautoescape %}
