@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+<project name="Project Build" default="build" basedir="../">
+	
+    <!-- Use this file to define any custom build targets (for example, automatically deploying via FTP). -->
+  <property file="build/config/ftp.properties"/>
+
+  <target name="-ftp" depends="-mkdirs">
+	<ftp server="${ftp.server}"
+		remotedir="${ftp.remotedir}"
+		userid="${ftp.userid}"
+		password="${ftp.password}"
+		verbose="yes"
+		depends="yes"
+		binary="no">
+		<fileset dir="./${dir.publish}/">
+			<include name="**/*.html"/>
+			<include name="**/*.js"/>
+			<include name="**/*.css"/>
+			<include name="**/*.txt"/>
+			<include name="**/*.php"/>
+			<include name="**/.htaccess"/>
+			<exclude name="**/${dir.php.libs}/"/>
+		</fileset>
+	</ftp>
+<!--
+	<ftp server="${ftp.server}"
+		remotedir="${ftp.remotedir}"
+		userid="${ftp.userid}"
+		password="${ftp.password}"
+		verbose="yes"
+		depends="yes"
+		binary="yes">
+		<fileset dir="./${dir.publish}">
+			<include name="**/*.jpg"/>
+			<include name="**/*.gif"/>
+			<include name="**/*.png"/>
+			<include name="**/*.ico"/>
+		</fileset>
+	</ftp>
+-->
+  </target>
+  
+  <target name="-less">
+    <exec executable="cmd">
+      <arg value="/c"/>
+      <arg value="lessc ${dir.less}/style.less ${dir.css}/style.css"/>
+    </exec>
+	<echo message="Created 'style.css'." />
+  </target>
+
+</project>
