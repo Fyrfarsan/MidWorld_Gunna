@@ -1,6 +1,6 @@
 # Gunna - A SMF 2.0 Theme for MidWorld Forum
 
-By Sunburned Goose
+By Sunburned Goose  
 http://forum.tiedtheleader.com
 
 ## About
