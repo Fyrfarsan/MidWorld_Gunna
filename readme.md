@@ -17,3 +17,16 @@ An [initializr](http://www.initializr.com/) based theme that uses [bootstrap](ht
 * [Initializr](http://www.initializr.com)
 * [HTML 5 Boilerplate](http://html5boilerplate.com/)
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+
+## Building Gunna
+
+You will need to add a ftp.properties file to the ./build/config/ directory.  This file will configure FTP access to TiedTheLeader's theme.  The login data will be accessiable on the MidWorld Forum.
+
+### Properties for ftp.properties file.
+
+```
+ftp.server = www.example.com
+ftp.remotedir = /
+ftp.userid = username
+ftp.password = sup3r-secret-password!
+```
