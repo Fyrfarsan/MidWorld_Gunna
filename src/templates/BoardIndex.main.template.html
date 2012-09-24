@@ -1,0 +1,131 @@
+{% if settings.showStatsIndex %}
+	<div id="index_common_stats">{{ txt.members }}: {{ stats.totalMembers }} &nbsp;&#8226;&nbsp; {{ txt.postsMade }}: {{ stats.totalPosts }} &nbsp;&#8226;&nbsp; {{ txt.topics }}: {{ stats.totalTopics }}
+	{% if settings.showLatestMember %}
+ {{ txt.welcomeMember }} <strong>{{ stats.linkToLatestMember|raw }}</strong>{{ txt.newestMember }}
+ 	{% endif %}
+	</div>
+{% endif %}
+{% if settings.showNewsFader %}
+	<div id="newsfader">
+		<div class="cat_bar">
+			<h3 class="catbg">
+				<img id="newsupshrink" src="{{ settings.imagesUrl }}/collapse.gif" alt="*" title="{{ txt.showNewsFader }}" align="bottom" style="display: none;" />{{ txt.news }}
+			</h3>
+		</div>
+		<ul class="reset" id="smfFadeScroller"{{ ((options.collapseNewsFader) ? ' style="display: none;"' : '')|raw }}>
+	{% for headline in headlines %}
+			<li>{{ headline|raw }}</li>
+	{% endfor %}
+		</ul>
+	</div>
+	<script type="text/javascript" src="{{ settings.defaultThemeUrl }}/scripts/fader.js"></script>
+	<script type="text/javascript">
+		var oNewsFader = new smf_NewsFader({
+			sSelf: 'oNewsFader',
+			sFaderControlId: 'smfFadeScroller',
+			sItemTemplate: '{{ '<strong>%1$s</strong>'|e('js') }}',
+			iFadeDelay: {{ settings.newsfaderTimeout }}
+		});
+
+		var smfNewsFadeToggle = new smc_Toggle({
+			bToggleEnabled: true,
+			bCurrentlyCollapsed: {{ ((options.collapseNewsFader) ? 'true' : 'false') }},
+			aSwappableContainers: [
+				'smfFadeScroller'
+			],
+			aSwapImages: [
+				{
+					sId: 'newsupshrink',
+					srcExpanded: smf_images_url + '/collapse.gif',
+					altExpanded: '{{ txt.upshrinkDescription|e('js') }}',
+					srcCollapsed: smf_images_url + '/expand.gif',
+					altCollapsed: '{{ txt.upshrinkDescription|e('js') }}'
+				}
+			],
+			oThemeOptions: {
+				bUseThemeSettings: {{ ((context.isGuest) ? 'false' : 'true') }},
+				sOptionName: 'collapse_news_fader',
+				sSessionVar: '{{ context.sessionVar|e('js') }}',
+				sSessionId: '{{ context.sessionID|e('js') }}'
+			},
+			oCookieOptions: {
+				bUseCookie: {{ ((context.isGuest) ? 'false' : 'true') }},
+				sCookieName: 'newsupshrink'
+			}
+		});
+	</script>
+{% endif %}
+	<div id="boardindex_table">
+		<table class="table_list">
+{% for category in categories %}
+			<tbody class="header" id="category_{{ category.ID }}">
+				<tr>
+					<td colspan="4">
+						<div class="cat_bar">
+							<h3 class="catbg">
+	{% if category.canCollapse %}
+								<a class="collapse" href="{{ category.collapseHref }}">{{ category.collapseImage|raw }}</a>
+		{% if category.showUnreadLink %}
+								<a class="unreadlink" href="{{ settings.scriptUrl }}?action=unread;c={{ category.ID }}">{{ txt.viewUnreadCategory }}</a>
+		{% endif %}
+	{% endif %}
+								{{ category.link|raw }}
+							</h3>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+	{% if category.isCollapsed %}
+			<tbody class="content" id="category_{{ category.ID }}_boards">
+		{% for board in category.boards %}
+				<tr id="board_{{ board.ID }}" class="windowbg2">
+					<td class="icon windowbg"{{ ((board.hasChildren) ? ' rowspan="2"' : '' )|raw }}>
+						<a href="{{ board.unreadHref }}">
+			{% if board.isNew or board.newChildren %}
+							<img src="{{ settings.imagesUrl ~ '/' ~ settings.variantThemeUrl ~ 'on' }}{{ ((board.isNew) ? '' : '2') }}.png" alt="{{ txt.newPosts }}" title="{{ txt.newPosts }}" />
+			{% elseif board.isRedirect %}
+							<img src="{{ settings.imagesUrl ~ '/' ~ settings.variantThemeUrl }}redirect.png" alt="*" title="*" />
+			{% else %}
+							<img src="{{ settings.imagesUrl ~ '/' ~ settings.variantThemeUrl }}off.png" alt="{{ txt.oldPosts }}" title="{{ txt.oldPosts }}" />
+			{% endif %}
+						</a>
+					</td>
+					<td class="info">
+						<a class="subject" href="{{ board.href }}" name="b{{ board.ID }}">{{ board.name }}</a>
+			{% if board.showUnapprovedPostLink %}
+						<a href="{{ board.unapprovedPostHref }}" title="{{ board.unapprovedPostTitle }}" class="moderation_link">(!)</a>
+			{% endif %}
+						<p>{{ board.description }}</p>
+			{% if board.hasModerators %}
+						<p class="moderators">{{ board.moderatorLinkPrefix }}: {{ board.moderators|join(', ')|raw }}</p>
+			{% endif %}
+					</td>
+					<td class="stats windowbg">
+						<p>{{ board.postCountText }} {{ ((board.isRedirect) ? txt.redirects : txt.posts) }}<br />{{ ((board.isRedirect) ? '' : board.topicCountText) }} {{ txt.boardTopics }}</p>
+					</td>
+					<td class="lastpost">
+			{% if board.doesLastPostHaveID %}
+						<p><strong>{{ txt.lastPost }}</strong>  {{ txt.by }} {{ board.lastPostMemberLink|raw }}<br />
+						{{ txt.in }} {{ board.lastPostLink|raw }}<br />
+						{{ txt.on }} {{ board.lastPostTime|raw }}</p>
+			{% endif %}
+					</td>
+				</tr>
+			{% if board.children is not empty %}
+				<tr id="board_{{ board.ID }}_children">
+					<td colspan="3" class="children windowbg">
+						<strong>{{ txt.parentBoards }}</strong>: {{ board.children|join(', ')|raw }}
+					</td>
+				</tr>
+			{% endif %}
+		{% endfor %}
+			</tbody>
+	{% endif %}
+			<tbody class="divider">
+				<tr>
+					<td colspan="4"></td>
+				</tr>
+			</tbody>
+{% endfor %}
+		</table>
+	</div>

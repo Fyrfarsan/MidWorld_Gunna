@@ -49,7 +49,7 @@
 							</ul>
 {% elseif content.showLoginBar %}
 						<script type="text/javascript" src="{{ settings.defaultThemeUrl }}/scripts/sha1.js"></script>
-						<form id="guest_form" action="{{ settings.scriptUrl }}?action=login2" method="post" accept-charset="{{ settings.characterSet }}"{% if not content.disableLoginHashing %} onsubmit="hashLoginPassword(this, \'{{ content.sessionId }}\');"{% endif %}>
+						<form id="guest_form" action="{{ settings.scriptUrl }}?action=login2" method="post" accept-charset="{{ settings.characterSet }}"{% if not content.disableLoginHashing %} onsubmit="hashLoginPassword(this, '{{ content.sessionID|e('js') }}');"{% endif %}>
 							<div class="info">{{ content.welcomeGuest }}</div>
 							<input type="text" name="user" size="10" class="input_text" />
 							<input type="password" name="passwrd" size="10" class="input_password" />
@@ -107,7 +107,7 @@ var oMainHeaderToggle = new smc_Toggle({
 		bUseThemeSettings: {{ ((not content.isGuest) ? 'true' : 'false')|raw }},
 		sOptionName: 'collapse_header',
 		sSessionVar: '{{ content.sessionVar|e('js') }}',
-		sSessionId: '{{ content.sessionId|e('js') }}'
+		sSessionId: '{{ content.sessionID|e('js') }}'
 	},
 	oCookieOptions: {
 		bUseCookie: {{ ((content.isGuest) ? 'true' : 'false')|raw }},

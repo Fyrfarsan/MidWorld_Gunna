@@ -78,7 +78,8 @@ function template_init()
 
 	$loader = new Twig_Loader_Filesystem($settings['theme_dir'] . '/templates');
 	$twig = new Twig_Environment($loader, array(
-	    //'cache' => $settings['theme_dir'] . '/cache',
+	    'cache' => $settings['theme_dir'] . '/cache',
+	    'auto_reload' => true,
 	));
 }
 
@@ -164,7 +165,7 @@ function template_body_above()
 			'showLoginBar' => (!empty($context['show_login_bar'])),
 			'characterSet' => $context['character_set'], 
 			'disableLoginHashing' => (!(empty($context['disable_login_hashing']))),
-			'sessionId' => $context['session_id'],
+			'sessionID' => $context['session_id'],
 			'sessionVar' => $context['session_var'],
 			'showOpenID' => (!empty($modSettings['enableOpenID'])),
 			'moderationReportsWaiting' => sprintf($txt['mod_reports_waiting'], $context['open_mod_reports']),

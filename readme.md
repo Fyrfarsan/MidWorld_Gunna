@@ -13,3 +13,7 @@ An [initializr](http://www.initializr.com/) based theme that uses [bootstrap](ht
 ## Requirements
 
 * [Simple Machines Forum 2.0](http://www.simplemachines.org/)
+* [Twig](http://twig.sensiolabs.org/)
+* [Initializr](http://www.initializr.com)
+* [HTML 5 Boilerplate](http://html5boilerplate.com/)
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
