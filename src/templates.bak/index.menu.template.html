@@ -1,0 +1,33 @@
+<div id="main_menu">
+	<ul class="dropmenu" id="menu_nav">
+{% for primaryMenu in menu %}
+		<li id="button_{{ loop.index0 }}">
+			<a class="{{ ((primaryMenu.active_button is defined and primaryMenu.active_button is not empty) ? 'active' : '')|raw }}firstlevel" href="{{ primaryMenu.href }}"{{ ((primaryMenu.target is defined and primaryMenu.target is not empty) ? ' target="' ~ primaryMenu.target ~ '"' : '')|raw }}>
+				<span class="{{ ((primaryMenu.is_last is defined and primaryMenu.is_last is not empty) ? 'last' : '')|raw }}firstlevel">{{ primaryMenu.title }}</span>
+			</a>
+	{% if primaryMenu.sub_buttons is not empty %}
+			<ul>
+		{% for secondaryMenu in primaryMenu.sub_buttons %}
+				<li>
+					<a href="{{ secondaryMenu.href }}"{{ ((secondaryMenu.target is defined and secondaryMenu.target is not empty) ? ' target="' ~ secondaryMenu.target ~ '"' : '')|raw }}>
+						<span class="{{ ((secondaryMenu.is_last is defined and secondaryMenu.is_last is not empty) ? 'last' : '')|raw }}">{{ secondaryMenu.title }}{{ ((secondaryMenu.sub_buttons is not empty) ? '...' : '')|raw }}</span>
+					</a>
+			{% if secondaryMenu.sub_buttons is not empty %}
+					<ul>
+				{% for tertiaryMenu in secondaryMenu.sub_buttons %}
+						<li>
+							<a href="{{ tertiaryMenu.href }}"{{ ((tertiaryMenu.target is defined and tertiaryMenu.target is not empty) ? ' target="' ~ tertiaryMenu.target ~ '"' : '')|raw }}>
+								<span class="{{ ((tertiaryMenu.is_last is defined and tertiaryMenu.is_last is not empty) ? 'last' : '')|raw }}">{{ tertiaryMenu.title }}</span>
+							</a>
+						</li>
+				{% endfor %}
+					</ul>
+			{% endif %}
+				</li>
+		{% endfor %}
+			</ul>
+	{% endif %}
+		</li>
+{% endfor %}
+	</ul>
+</div>

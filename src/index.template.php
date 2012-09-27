@@ -36,7 +36,7 @@ function template_html_above()
 			'themeVariant' 		=> $settings['theme_variant'],
 			),
 		'html' => array(
-			'showRtlDir' 	=> (($context['right_to_left']) ? true : false),
+			'showRtlDir' 		=> (($context['right_to_left']) ? true : false),
 			),
 		'head' => array(
 			'canonicalUrl' 		=> !empty($context['canonical_url']),
@@ -70,7 +70,21 @@ function template_html_above()
 
 function template_body_above()
 {
-	global $context, $settings, $options, $scripturl, $txt, $modSettings, $twig;
+	global $context, $settings, $options, $scripturl, $txt, $modSettings, $twig, $user_info, $smcFunc;
+
+  	$primaryGroupName = '';
+
+  	if (!empty($user_info['groups'])) {
+		$result = $smcFunc['db_query']('', '
+			SELECT group_name FROM smf_membergroups where id_group = {int:id_group}',
+			array(
+				'id_group' => $user_info['groups'][0],
+			)
+		);
+
+		list ($primaryGroupName) = $smcFunc['db_fetch_row']($result);
+		$smcFunc['db_free_result']($result);
+  	}
 
 	$vm = array(
 		'settings' => array(
@@ -113,7 +127,8 @@ function template_body_above()
 			'newslineHtml' => $context['random_news_line'],
 			'isGuest' => ($context['user']['is_guest']) ? true : false,
 			'templateMenu' => '',
-			'templateLinktree' => ''
+			'templateLinktree' => '',
+			'primaryGroupName' 	=> $primaryGroupName,
 			),
 		'txt' => array(
 			'upshrinkDescription' => $txt['upshrink_description'],

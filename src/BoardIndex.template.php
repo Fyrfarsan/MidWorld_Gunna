@@ -140,7 +140,7 @@ function template_main()
 	}
 
 	echo $twig->render('BoardIndex.main.template.html', $vm);
-
+/*
 	if ($context['user']['is_logged'])
 	{
 		echo '
@@ -175,6 +175,7 @@ function template_main()
 	}
 
 	template_info_center();
+	*/
 }
 
 function template_info_center()

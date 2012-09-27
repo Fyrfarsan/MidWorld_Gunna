@@ -818,8 +818,9 @@
         <if>
             <equals arg1="${build.css.less}" arg2="true"/>
             <then>
+                <copy file="${dir.source}/less/bootstrap.less" tofile="${dir.intermediate}/less/bootstrap.less"/>
                 <echo message="Processing LESS CSS..."/>
-                <lessjs input="${dir.intermediate}/${dir.css}/style-concat.css" output="${dir.intermediate}/${dir.css}/style-concat.css" />
+                <lessjs input="${dir.intermediate}/less/bootstrap.less" output="${dir.intermediate}/${dir.css}/style-concat.css" />
             </then>
             <else>
                 <echo message="NOT Processing LESS CSS"/>
