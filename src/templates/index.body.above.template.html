@@ -7,16 +7,21 @@
 				<img class="glamor" src="{{ settings.themeUrl }}/images/header-glamor.png" />
 				<img class="logo" src="{{ settings.themeUrl }}/images/midworld.png" />
 				<div id="body-content"></div>
+				<div>
+					<img style="width: 15px; height: 16px;" src="{{ settings.themeUrl }}/images/user.png" />
+				</div>
 			</div>
         </div>
 		<div id="body-footer-container">
 {% if content.isUserLoggedIn %}
-			<ul class="tagline user">
+			<div class="user">
+				<ul class="tagline">
 	{% if content.showAvatar %}
-				<li class="avatar">{% autoescape false %}{{ content.avatarImageHtml }}{% endautoescape %}</li>
+					<li class="avatar"><em></em><span>{% autoescape false %}{{ content.avatarImageHtml }}{% endautoescape %}</span></li>
 	{% endif %}
-				<li{{ ((content.showAvatar) ? ' class="last"' : '')|raw }}>{{ content.username }}<br>{{ content.primaryGroupName }}</li>
-			</ul>
+					<li{{ ((content.showAvatar) ? ' class="last"' : '')|raw }}><em></em><span>{{ content.username }}<br>{{ content.primaryGroupName }}</span></li>
+				</ul>
+			</div>
 {% endif %}
 			<ul class="tagline">
 				<li>Tied the Leader</li>

@@ -1,7 +1,0 @@
-<div class="buttonlist{{ ((direction is not empty) ? ' float' ~ direction : '')|raw }}"{{ ((stripOptions.id is not empty) ? ' id="' ~ stripOptions.id ~ '"' : '')|raw}}>
-	<ul>
-{% for button in buttons %}
-		<li><a{{ ((button.id is defined) ? ' id="button_strip_' ~ button.id ~ '"' : '')|raw }} class="button_strip_{{ loop.index0 }}{{ ((button.active is defined) ? ' active' : '')|raw }}" href="{{ button.url }}"{{ ((button.custom is defined) ? ' ' ~ button.custom : '')|raw }}><span{{ ((loop.index == loop.length) ? ' class="last"' : '')|raw }}>{{ button.label }}</span></a></li>
-{% endfor %}
-	</ul>
-</div>

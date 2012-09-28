@@ -227,7 +227,7 @@ body {
 	.glamor {
 		position: absolute; 
 		
-		.border-radiuses (0px, 0px, 0px, 14px);
+		.border-radiuses (1px, 0px, 0px, 14px);
 		.opacity (.75);
 	}
 
@@ -258,11 +258,18 @@ body {
 	text-transform: uppercase; 
 	font-size: 80%;
 
+	.avatar {
+		img {
+			width: 40px;
+			vertical-align: middle;
+		}
+	}
+
 	li {
 		list-style: none; 
 		margin: 0px; 
 		padding: 0px; 
-		margin-right: 2em;
+		letter-spacing: .1em;
 
 		@media only screen and (min-width: 768px) { 
 			display: inline; 
@@ -275,23 +282,34 @@ body {
 	}
 }
 
-.tagline .avatar img {
-	width: 40px;
-	vertical-align: auto;
-}
+.user {
+	.tagline {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		text-transform: none;
 
-.tagline.user {
-	margin-top: 15px;
-	margin-bottom: 15px;
-	text-transform: none;
-	font-size: 85%;
+		li {
+			display: inline-block; 
+			margin-right: .5em;
+			letter-spacing: auto;
 
-	li {
-		display: inline-block; 
-		margin-right: .5em;
+			em {
+			    height: 100%;
+			    vertical-align: middle;
+			    display: inline-block; 
+			}
 
-		.last {
-			margin-right: 0em;
+			span {
+				vertical-align: middle;
+				display: inline-block; 
+				text-align: left;
+				line-height: 1.5em;
+			}
+
+			.last {
+				margin-right: 0em;
+				text-align: left !override;
+			}
 		}
 	}
 }
