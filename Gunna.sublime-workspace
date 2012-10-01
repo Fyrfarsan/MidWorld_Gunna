@@ -12,26 +12,18 @@
 	"buffers":
 	[
 		{
-			"file": "src/BoardIndex.template.php",
-			"settings":
-			{
-				"buffer_size": 18910,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/index.template.php",
-			"settings":
-			{
-				"buffer_size": 9726,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/less/bootstrap.less",
 			"settings":
 			{
-				"buffer_size": 670,
+				"buffer_size": 8530,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/border-radius.htm",
+			"settings":
+			{
+				"buffer_size": 150176,
 				"line_ending": "Windows"
 			}
 		},
@@ -39,36 +31,52 @@
 			"file": "src/templates/index.body.above.template.html",
 			"settings":
 			{
-				"buffer_size": 6574,
+				"buffer_size": 3123,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "build/build.xml",
-			"settings":
-			{
-				"buffer_size": 50710,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "build/config/default.properties",
-			"settings":
-			{
-				"buffer_size": 5154,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "src/templates/index.html.above.template.html",
 			"settings":
 			{
-				"buffer_size": 3863,
+				"buffer_size": 3901,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tmp/intermediate/css/style-concat.css",
+			"settings":
+			{
+				"buffer_size": 3881,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/90ae4a3.css",
+			"settings":
+			{
+				"buffer_size": 489,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/index.html.below.template.html",
+			"settings":
+			{
+				"buffer_size": 19,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/index.body.below.template.html",
+			"settings":
+			{
+				"buffer_size": 664,
 				"line_ending": "Windows"
 			}
 		}
 	],
-	"build_system": "Packages/Java/Ant.sublime-build",
+	"build_system": "Packages/User/GunnaBuild.sublime-build",
 	"command_palette":
 	{
 		"height": 0.0,
@@ -92,6 +100,28 @@
 	},
 	"file_history":
 	[
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/intermediate/css/style-concat.css",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/7a89eec.css",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.body.above.template.html",
+		"/C/Users/ricky.casey.PENULT/Desktop/user",
+		"/C/Users/ricky.casey.PENULT/Desktop/drawing",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.html.above.template.html",
+		"/C/Users/ricky.casey.PENULT/Desktop/ricky.casey",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/index.template.php",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/BoardIndex.template.php",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates.bak/BoardIndex.main.template.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.template 3.php",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates.bak/index.buttonstrip.template.html",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates.bak/index.body.above.template.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.template.php",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.template 2.php",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.body.below.template.html",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/BoardIndex.main.template.html",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/build.xml",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/config/default.properties",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.html.above.template.html",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/less/elements.less",
+		"/C/Users/ricky.casey.PENULT/AppData/Roaming/Sublime Text 2/Packages/User/GunnaBuild.sublime-build",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/css/bootstrap-responsive.css",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/css/main.css",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/runbuildscript.bat",
@@ -99,20 +129,14 @@
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/publish/css/3f8260d.css",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/less/bootstrap.less",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/intermediate/css/main.css",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/intermediate/css/style-concat.css",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.body.below.template.html",
-		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.template.php",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/css/bootstrap.css",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.php",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.html.below.template.html",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.html.above.template.html",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/build.xml",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/ModSettings.php",
 		"/C/Users/ricky.casey.PENULT/Desktop/install.php",
 		"/C/Users/ricky.casey.PENULT/Desktop/modification.xml",
 		"/C/Users/ricky.casey.PENULT/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/ricky.casey.PENULT/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/config/default.properties",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/project.xml",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/config/ftp.properties",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/readme.md",
@@ -125,7 +149,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"C:\\Users\\ricky.casey.PENULT\\Documents\\GitHub\\MidWorld_Gunna\\src\\templates",
@@ -137,6 +161,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"14px",
+			"radius",
+			"radiuse",
+			"border-radiuses",
+			"gradients",
+			"radius",
+			"radius			",
+			"radius",
+			"border-radiuses",
+			"filter3059",
+			"theme",
+			"radius",
+			"\n",
 			"less",
 			"lessjs",
 			"less",
@@ -191,15 +228,179 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/BoardIndex.template.php",
+					"file": "src/less/bootstrap.less",
 					"settings":
 					{
-						"buffer_size": 18910,
+						"buffer_size": 8530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6665,
+								6665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2457.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/border-radius.htm",
+					"settings":
+					{
+						"buffer_size": 150176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91865,
+								91865
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4485.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/templates/index.body.above.template.html",
+					"settings":
+					{
+						"buffer_size": 3123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								3114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 658.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/templates/index.html.above.template.html",
+					"settings":
+					{
+						"buffer_size": 3901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								485,
+								512
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "tmp/intermediate/css/style-concat.css",
+					"settings":
+					{
+						"buffer_size": 3881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/90ae4a3.css",
+					"settings":
+					{
+						"buffer_size": 489,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/templates/index.html.below.template.html",
+					"settings":
+					{
+						"buffer_size": 19,
 						"regions":
 						{
 						},
@@ -212,8 +413,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -222,164 +422,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/index.template.php",
+					"buffer": 7,
+					"file": "src/templates/index.body.below.template.html",
 					"settings":
 					{
-						"buffer_size": 9726,
+						"buffer_size": 664,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2363,
-								2366
+								664,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 498.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/less/bootstrap.less",
-					"settings":
-					{
-						"buffer_size": 670,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								610,
-								610
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/templates/index.body.above.template.html",
-					"settings":
-					{
-						"buffer_size": 6574,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								345,
-								345
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "build/build.xml",
-					"settings":
-					{
-						"buffer_size": 50710,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								38574,
-								38574
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 11808.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "build/config/default.properties",
-					"settings":
-					{
-						"buffer_size": 5154,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3131,
-								3135
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/JavaProperties.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 821.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/templates/index.html.above.template.html",
-					"settings":
-					{
-						"buffer_size": 3863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1584,
-								1584
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -418,6 +481,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 140.0
+	},
 	"replace":
 	{
 		"height": 62.0
@@ -443,6 +510,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 276.0,
 	"status_bar_visible": true
 }

@@ -39,30 +39,19 @@
 }
 
 .border-radius (@radius: 5px) {
-	-webkit-border-radius: @radius;
-	-moz-border-radius:    @radius;
 	border-radius:         @radius;
+	-moz-border-radius:    @radius;
+	-webkit-border-radius: @radius;
 
 	-moz-background-clip:    padding;
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
 }
 
-.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
-	-webkit-border-top-right-radius:    @topright;
-	-webkit-border-bottom-right-radius: @bottomright;
-	-webkit-border-bottom-left-radius:  @bottomleft;
-	-webkit-border-top-left-radius:     @topleft;
-
-	-moz-border-radius-topright:        @topright;
-	-moz-border-radius-bottomright:     @bottomright;
-	-moz-border-radius-bottomleft:      @bottomleft;
-	-moz-border-radius-topleft:         @topleft;
-
-	border-top-right-radius:            @topright;
-	border-bottom-right-radius:         @bottomright;
-	border-bottom-left-radius:          @bottomleft;
-	border-top-left-radius:             @topleft;
+.border-radiuses (@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) { 
+	border-radius:         @topleft @topright @bottomright @bottomleft;
+	-moz-border-radius:    @topleft @topright @bottomright @bottomleft;
+	-webkit-border-radius: @topleft @topright @bottomright @bottomleft;	
 
 	-moz-background-clip:    padding;
 	-webkit-background-clip: padding-box;
@@ -91,15 +80,6 @@
 	background-image: -ms-linear-gradient(left, @startColor, @endColor);
 	background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
-
-	background: #d3e4f1;
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d3e4f1), color-stop(64%,#f7f7f7), color-stop(100%,#d3e4f1));
-	background: -webkit-linear-gradient(left,  #d3e4f1 0%,#f7f7f7 64%,#d3e4f1 100%);
-	background: -moz-linear-gradient(left,  #d3e4f1 0%, #f7f7f7 64%, #d3e4f1 100%);
-	background: -ms-linear-gradient(left,  #d3e4f1 0%,#f7f7f7 64%,#d3e4f1 100%);
-	background: -o-linear-gradient(left,  #d3e4f1 0%,#f7f7f7 64%,#d3e4f1 100%);
-	background: linear-gradient(to right,  #d3e4f1 0%,#f7f7f7 64%,#d3e4f1 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e4f1', endColorstr='#d3e4f1',GradientType=1 );
 
 .horizontal-gradients (@startColor: #eee, @endColor: white, @startColor2: #eee, @endColor2: white) {
  	background-color: @startColor;
@@ -221,26 +201,24 @@ body {
 	border: 1px solid #d3e4f1; 
 	margin-bottom: 5px;
 
-	.border-radius(15px); 
+	.border-radius (15px);
 	.box-shadow (0 0 10px 0px rgba(157, 157, 157, .10));
 
 	.glamor {
 		position: absolute; 
 		
-		.border-radiuses (1px, 0px, 0px, 14px);
+		.border-radiuses (14px, 1px, 0px, 0px);
 		.opacity (.75);
 	}
 
 	.logo {
 		position: absolute; 
 		right: 15px;
-		
-		.border-radiuses (14px, 0px, 0px, 0px);
+
 		
 		@media only screen and (min-width: 768px) { 
 			right: auto;
 			left: 180px;
-			.border-radiuses (0px, 0px, 0px, 0px);
 		} 
 	}
 }
