@@ -1,6 +1,24 @@
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ settings.themeUrl }}/js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
-        <script src="{{ settings.themeUrl }}/js/vendor/bootstrap.min.js"></script>
+			</div>
+        </div>
+		<div id="body-footer-container">
+{% if user.isLoggedIn %}
+			<div class="user">
+				<ul class="tagline">
+	{% if user.showAvatar %}
+					<li class="avatar"><em></em><span>{% autoescape false %}{{ user.avatarImageHtml }}{% endautoescape %}</span></li>
+	{% endif %}
+					<li{{ ((content.showAvatar) ? ' class="last"' : '')|raw }}><em></em><span><a href="{{ settings.scriptUrl }}?action=profile;u={{ user.id }}">{{ user.username }}</a><br>{{ user.primaryGroupName }}</span></li>
+				</ul>
+			</div>
+{% endif %}
+			<ul class="tagline">
+				<li>Tied the Leader</li>
+				<li>Good Game Network</li>
+			</ul>
+			<ul class="tagline">
+				<li>Credits</li>
+			</ul>
+		</div>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

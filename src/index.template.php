@@ -169,7 +169,26 @@ function template_body_above()
 
 function template_body_below()
 {
-	global $context, $settings, $options, $scripturl, $txt, $modSettings, $twig;
+	global $user_info, $context, $settings, $options, $scripturl, $txt, $modSettings, $twig, $smcFunc;
+
+	// echo '<pre>';
+	// print_r($context);
+	// echo '</pre>';
+	// exit;
+
+  	$primaryGroupName = '';
+
+  	if (!empty($user_info['groups'])) {
+		$result = $smcFunc['db_query']('', '
+			SELECT group_name FROM smf_membergroups where id_group = {int:id_group}',
+			array(
+				'id_group' => $user_info['groups'][0],
+			)
+		);
+
+		list ($primaryGroupName) = $smcFunc['db_fetch_row']($result);
+		$smcFunc['db_free_result']($result);
+  	}
 
 	$vm = array(
 		'settings' => array(
@@ -179,6 +198,14 @@ function template_body_below()
 			'themeUrl' => $settings['theme_url'],
 			'themeVariant' => $settings['theme_variant'],
 			),
+		'user' => array(
+			'id' => $user_info['id'],
+			'username' => $context['user']['name'],
+			'isLoggedIn' => ($context['user']['is_logged']) ? true : false,
+			'primaryGroupName' 	=> $primaryGroupName,
+			'showAvatar' => !empty($context['user']['avatar']),
+			'avatarImageHtml' => $context['user']['avatar']['image'],
+			),
 		'footer' => array(
 			'copyright' => '',
 			'showRss' => (!empty($modSettings['xmlnews_enable']) && (!empty($modSettings['allow_guestAccess']) || $context['user']['is_logged'])),
@@ -186,6 +213,13 @@ function template_body_below()
 			'loadTime' => $context['load_time'],
 			'loadQueries' => $context['load_queries'],
 			'showForumWidth' => !empty($settings['forum_width']),
+			),
+		'content' => array(
+			'isUserLoggedIn' => ($context['user']['is_logged']) ? true : false,
+			'showAvatar' => !empty($context['user']['avatar']),
+			'avatarImageHtml' => $context['user']['avatar']['image'],
+			'username' => $context['user']['name'],
+			'primaryGroupName' 	=> $primaryGroupName,
 			),
 		'txt' => array(
 			'validXhtml' => $txt['valid_xhtml'],

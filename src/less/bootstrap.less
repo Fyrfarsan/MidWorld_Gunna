@@ -204,11 +204,10 @@ body {
 	.border-radius (15px);
 	.box-shadow (0 0 10px 0px rgba(157, 157, 157, .10));
 
-	.glamor {
+	.ttl-logo img {
 		position: absolute; 
 		
 		.border-radiuses (14px, 1px, 0px, 0px);
-		.opacity (.75);
 	}
 
 	.logo {
@@ -294,7 +293,7 @@ body {
 
 #body-content {
 	height: 1px;
-	margin-top: 40px;
+	margin-top: 60px;
 
 	background: #d3e4f1;
 	background: -moz-linear-gradient(left,  #d3e4f1 0%, #f7f7f7 64%, #d3e4f1 100%);
@@ -304,4 +303,8 @@ body {
 	background: -ms-linear-gradient(left,  #d3e4f1 0%,#f7f7f7 64%,#d3e4f1 100%);
 	background: linear-gradient(to right,  #d3e4f1 0%,#f7f7f7 64%,#d3e4f1 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e4f1', endColorstr='#d3e4f1',GradientType=1 );
+
+	@media only screen and (max-width: 539px) { 
+		margin-top: 40px;
+	} 
 }
