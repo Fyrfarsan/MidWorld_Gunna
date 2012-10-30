@@ -158,19 +158,19 @@
 #headerimage { 
 	background-repeat: no-repeat;
 	
-	@media only screen and (min-width: 768px) and (max-width: 979px) { 
+	@media (min-width: 768px) and (max-width: 979px) { 
 		background-image: url("../images/bigtitle.png"); 
 		width: 200px; 
 		height: 60px;
 	} 
 		
-	@media only screen and (max-width: 767px) { 
+	@media (max-width: 767px) { 
 		background-image: url("../images/littletitle.png"); 
 		width: 100px; 
 		height: 30px;
 	}
 	
-	@media only screen and (min-width: 980px) { 
+	@media (min-width: 980px) { 
 		background-image: url("../images/bigtitle.png"); 
 		width: 200px; 
 		height: 60px;
@@ -179,7 +179,7 @@
 
 body {
 		
-	@media only screen and (max-width: 767px) { 
+	@media (max-width: 767px) { 
 		padding-right: 0px;
 		padding-left: 0px;
 	}
@@ -215,7 +215,7 @@ body {
 		right: 15px;
 
 		
-		@media only screen and (min-width: 768px) { 
+		@media (min-width: 768px) { 
 			right: auto;
 			left: 180px;
 		} 
@@ -248,7 +248,7 @@ body {
 		padding: 0px; 
 		letter-spacing: .1em;
 
-		@media only screen and (min-width: 768px) { 
+		@media (min-width: 768px) { 
 			display: inline; 
 			margin-right: 0em;
 		} 
@@ -291,7 +291,7 @@ body {
 	}
 }
 
-#body-content {
+#header-seperator {
 	height: 1px;
 	margin-top: 60px;
 
@@ -304,7 +304,51 @@ body {
 	background: linear-gradient(to right,  #d3e4f1 0%,#f7f7f7 64%,#d3e4f1 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e4f1', endColorstr='#d3e4f1',GradientType=1 );
 
-	@media only screen and (max-width: 539px) { 
+	@media (max-width: 539px) { 
 		margin-top: 40px;
 	} 
+}
+
+#header-navigation {
+}
+
+#webring-navigation {
+	ul  {
+		list-style: none; 
+		margin: 0px; 
+		padding: 0px; 
+		text-transform: uppercase; 
+		font-size: 80%;
+	}
+
+	li {
+		display: inline-block; 
+	}
+}
+
+#forum-navigation {
+	text-align: right;
+
+	ul  {
+		list-style: none; 
+		margin: 0px; 
+		padding: 0px; 
+		text-transform: uppercase; 
+		font-size: 80%;
+	}
+
+	li {
+		display: inline-block; 
+		padding: 3px;
+	}
+
+	.value {
+		padding-right: 3px;
+	}
+
+	.glyph {
+		display: inline-block; 
+		width: 20px; 
+		height: 20px;
+	}
 }
