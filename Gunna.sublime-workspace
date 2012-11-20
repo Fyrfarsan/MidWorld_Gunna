@@ -15,11 +15,11 @@
 	"build_system": "Packages/User/GunnaBuild.sublime-build",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 196.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -36,26 +36,49 @@
 	},
 	"file_history":
 	[
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.body.above.template.html",
+		"/E/Build 2012/videos/downloadBuildVideos.ps1",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/menu_db_install.php",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.html.above.template.html",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.body.below.template.html",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/index.template.php",
+		"/C/Users/ricky.casey.PENULT/AppData/Roaming/Sublime Text 2/Packages/User/GunnaBuild.sublime-build",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/index.template.php",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/less/bootstrap.less",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/Load.php",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/Subs.php",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/index.php",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/SSI.php",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/main.php",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/index.body.below.template.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/index.body.above.template.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/index.html.above.template.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-2/modernizr-2.6.1-respond-1.1.0.min.js",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.html.below.template.html",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/project.xml",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/build.xml",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/php/libs/mdetect.php",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/picturefill/index.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.html.above.template.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.body.above.template.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/matchmedia.js",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/modernizr-2.6.1-respond-1.1.0.min.js",
+		"/C/Users/ricky.casey.PENULT/Desktop/index.html",
+		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/dd07b29.js",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/intermediate/css/main.css",
+		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/intermediate/css/style-concat.css",
+		"/C/Users/ricky.casey.PENULT/Desktop/index.template.php",
+		"/C/Users/ricky.casey.PENULT/Desktop/index.template.php~",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/publish/templates/index.html.above.template.html",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/BoardIndex.main.template.html",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.body.below.template.html",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.html.above.template.html",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/config/default.properties",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/build.xml",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/index.template.php",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/templates.bak/BoardIndex.main.template.html",
-		"/C/Users/ricky.casey.PENULT/AppData/Roaming/Sublime Text 2/Packages/User/GunnaBuild.sublime-build",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/BoardIndex.template.php",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/publish/templates/index.body.below.template.html",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.body.above.template.html",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/fader.js",
-		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.body.above.template.html",
 		"/C/Users/ricky.casey.PENULT/Desktop/ricky-cc.svg",
 		"/C/Users/ricky.casey.PENULT/Desktop/ricky-cc",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/less/bootstrap.less",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates/index.html.below.template.html",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/90ae4a3.css",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/intermediate/css/style-concat.css",
 		"/C/Users/ricky.casey.PENULT/Desktop/ricky.casey",
 		"/C/Users/ricky.casey.PENULT/Desktop/ricky-c.svg",
 		"/C/Users/ricky.casey.PENULT/Desktop/New Member",
@@ -63,7 +86,6 @@
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/7a89eec.css",
 		"/C/Users/ricky.casey.PENULT/Desktop/user",
 		"/C/Users/ricky.casey.PENULT/Desktop/drawing",
-		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.html.above.template.html",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/BoardIndex.template.php",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/templates.bak/BoardIndex.main.template.html",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.template 3.php",
@@ -77,7 +99,6 @@
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/runbuildscript.bat",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/publish/css/da39a3e.css",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/publish/css/3f8260d.css",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/tmp/intermediate/css/main.css",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/src/css/bootstrap.css",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/index.php",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/ModSettings.php",
@@ -85,7 +106,6 @@
 		"/C/Users/ricky.casey.PENULT/Desktop/modification.xml",
 		"/C/Users/ricky.casey.PENULT/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/ricky.casey.PENULT/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/project.xml",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/build/config/ftp.properties",
 		"/C/Users/ricky.casey.PENULT/Documents/GitHub/MidWorld_Gunna/readme.md",
 		"/C/Users/ricky.casey.PENULT/AppData/Local/Temp/fz3temp-1/BoardIndex.php",
@@ -100,6 +120,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\Users\\ricky.casey.PENULT\\Documents\\GitHub\\MidWorld_Gunna\\",
 			"C:\\Users\\ricky.casey.PENULT\\Documents\\GitHub\\MidWorld_Gunna\\src\\templates",
 			"C:\\Users\\ricky.casey.PENULT\\Documents\\GitHub\\MidWorld_Gunna\\build"
 		]
@@ -109,6 +130,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"content",
+			"<pre>{{ debug }}</pre>",
+			"]",
+			"[",
+			"png",
+			"menu_s",
+			"menu_items",
+			"smf_menu_items",
+			"theme_copyright",
+			"template_menu",
+			"menu",
+			"template_menu",
+			"search",
+			"body-content",
+			"doc",
+			"offsetWidth",
+			" only screen and",
+			"media",
+			"only screen and ",
+			"imagesUrl",
+			"\"",
 			"sha",
 			"ordered",
 			"scripts.sha",
@@ -175,6 +217,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
+			"",
+			"'",
 			"=\"20\"",
 			"",
 			"stroke-width:1px;",
@@ -203,7 +248,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -257,6 +302,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 276.0,
+	"side_bar_width": 286.0,
 	"status_bar_visible": true
 }
