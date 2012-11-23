@@ -6,10 +6,24 @@
 	</div>
 {% endif %}
 {% if settings.showNewsFader %}
+<div id="newsfader-mobile" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+{% for headline in headlines %}
+		<div class="item"><div class="carousel-caption">{{ headline|raw }}</div></div>
+{% endfor %}
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+
+
 	<div id="newsfader">
 		<div class="cat_bar">
 			<h3 class="catbg">
-				<img id="newsupshrink" src="{{ settings.imagesUrl }}/collapse.gif" alt="*" title="{{ txt.showNewsFader }}" align="bottom" style="display: none;" />{{ txt.news }}
+				<img id="newsupshrink" src="{{ settings.imagesUrl }}/collapse.gif" alt="*" title="{{ txt.upshrinkDescription }}" align="bottom" style="display: none;" />{{ txt.news }}
 			</h3>
 		</div>
 		<ul class="reset" id="smfFadeScroller"{{ ((options.collapseNewsFader) ? ' style="display: none;"' : '')|raw }}>

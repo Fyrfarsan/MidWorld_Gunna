@@ -5,9 +5,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta http-equiv="Content-Type" content="text/html; charset={{ settings.characterSet }}" />
+        <meta http-equiv="Content-Type" content="text/html; charset={{ head.characterSet }}" />
         <title>{{ head.pageTitle }}</title>
-        <meta name="description" content="{{ head.showPrsonalMessages }}" />
+        <meta name="description" content="{{ txt.showPersonalMessages }}" />
 {% if head.metaKeywords is not empty %}
         <meta name="keywords" content="{{ head.metaKeywords }}" />
 {% endif %}
@@ -26,25 +26,24 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ settings.themeUrl }}/js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
         <script src="{{ settings.themeUrl }}/js/vendor/bootstrap.min.js"></script>
-        <script src="{{ settings.themeUrl }}/js/vendor/raphael-min.js"></script>
         <script type="text/javascript" src="{{ settings.defaultThemeUrl }}/scripts/script.js?fin20"></script>
         <script type="text/javascript"><!-- // --><![CDATA[
             var smf_theme_url = "{{ settings.themeUrl }}";
             var smf_default_theme_url = "{{ settings.defaultThemeUrl }}";
             var smf_images_url = "{{ settings.imagesUrl }}";
             var smf_scripturl = "{{ settings.scriptUrl }}";
-            var smf_iso_case_folding = {{ ((settings.isoCaseFolding) ? 'true' : 'false')|raw }};
-            var smf_charset = "{{ settings.characterSet }}";
+            var smf_iso_case_folding = {{ ((head.isoCaseFolding) ? 'true' : 'false')|raw }};
+            var smf_charset = "{{ head.characterSet }}";
 {% if head.showPMPopup %}
             var fPmPopup = function ()
             {
-                if (confirm("{{ txt.showPrsonalMessages}}"))
+                if (confirm("{{ txt.showPersonalMessages}}"))
                     window.open(smf_prepareScriptUrl(smf_scripturl) + "action=pm");
             }
             addLoadEvent(fPmPopup);
 {% endif %}
-            var ajax_notification_text = "{{ txt.ajax_in_progress }}";
-            var ajax_notification_cancel_text = "{{ txt.modify_cancel }}";
+            var ajax_notification_text = "{{ txt.ajaxInProgress }}";
+            var ajax_notification_cancel_text = "{{ txt.modifyCancel }}";
         // ]]></script>
         <!-- scripts concatenated and minified via build script -->
         <script src="js/main.js"></script>

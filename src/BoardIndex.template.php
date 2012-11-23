@@ -139,9 +139,9 @@ function template_main()
 		$vm['categories'][] = $vmCategory;
 	}
 
-	echo '<pre>';
+	//echo '<pre>';
 	//print_r($context);
-	echo '</pre>';
+	//echo '</pre>';
 
 	echo $twig->render('BoardIndex.main.template.html', $vm);
 /*

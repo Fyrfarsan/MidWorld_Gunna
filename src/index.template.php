@@ -20,6 +20,7 @@ function template_init()
 	$twig = new Twig_Environment($loader, array(
 	    'cache' => $settings['theme_dir'] . '/cache',
 	    'auto_reload' => true,
+	    'strict_variables' => true,
 	));
 }
 
@@ -55,7 +56,7 @@ function template_html_above()
 			),
 		'txt' => array(
 			'rss' 					=> $txt['rss'],
-			'showPrsonalMessages' 	=> $txt['show_personal_messages'],
+			'showPersonalMessages' 	=> $txt['show_personal_messages'],
 			'ajaxInProgress' 		=> $txt['ajax_in_progress'],
 			'modifyCancel' 			=> $txt['modify_cancel'],
 			),
@@ -98,7 +99,124 @@ function template_body_above()
 			'isNewsEnabled' => (!empty($settings['enable_news'])),
 			),
 		'context' => array(
+			'webring' => array(
+				'blog' => array(
+					'title' => 'Blog',
+					'href' => 'http://www.tiedtheleader.com',
+					'show' => 1,
+					'target' => '_blank',
+					'subButtons' => array(),
+					'isLast' => false,
+					'level' => 0,
+					'activeButton' => 0,
+					),
+				'forum' => array(
+					'title' => 'Forum',
+					'href' => 'http://forum.tiedtheleader.com',
+					'show' => 1,
+					'target' => '_blank',
+					'subButtons' => array(),
+					'isLast' => false,
+					'level' => 0,
+					'activeButton' => 1,
+					),
+				'network' => array(
+					'title' => 'Network',
+					'href' => 'http://network.tiedtheleader.com',
+					'show' => 1,
+					'target' => '_blank',
+					'subButtons' => array(),
+					'isLast' => false,
+					'level' => 0,
+					'activeButton' => 0,
+					),
+				'clan' => array(
+					'title' => 'Clan',
+					'href' => 'http://clan.tiedtheleader.com',
+					'show' => 1,
+					'target' => '_blank',
+					'subButtons' => array(),
+					'isLast' => false,
+					'level' => 0,
+					'activeButton' => 0,
+					),
+				'foundation' => array(
+					'title' => 'Foundation',
+					'href' => 'http://foundation.tiedtheleader.com',
+					'show' => 1,
+					'target' => '_blank',
+					'subButtons' => array(),
+					'isLast' => false,
+					'level' => 0,
+					'activeButton' => 0,
+					),
+				),
 			'menu' => $context['menu_buttons'],
+			'mobileMenu' => array(
+				'admin' => array(
+					'controlPanel' => $context['menu_buttons'][7],
+					'approveMembers' => array(
+						'title' => 'Approve Members',
+						'href' => $scripturl . '?action=admin;area=viewmembers;sa=browse;type=approve',
+						'show' => 1,
+						'target' => '_self',
+						'sub_buttons' => array(),
+						'is_last' => false,
+						'level' => 0,
+						'active_button' => 0
+						),
+					'moderate' => $context['menu_buttons'][5],
+					),
+				'main' => array(
+					'profile' => $context['menu_buttons'][6],
+					'unread' => array(
+						'title' => 'Show Unread Posts',
+						'href' => $scripturl . '?action=unread',
+						'show' => 1,
+						'target' => '_self',
+						'sub_buttons' => array(),
+						'is_last' => false,
+						'level' => 0,
+						'active_button' => 0
+						),
+					'members' => $context['menu_buttons'][9],
+					'replies' => array(
+						'title' => 'Show Unread Replies',
+						'href' => $scripturl . '?action=unreadreplies',
+						'show' => 1,
+						'target' => '_self',
+						'sub_buttons' => array(),
+						'is_last' => false,
+						'level' => 0,
+						'active_button' => 0
+						),
+					'calendar' => $context['menu_buttons'][8],
+					'messages' => $context['menu_buttons'][7],
+					'logout' => $context['menu_buttons'][10],
+					'xbl' => array(
+						'title' => 'Xbox Live Status',
+						'href' => $scripturl . '?action=gsfs',
+						'show' => 1,
+						'target' => '_self',
+						'sub_buttons' => array(),
+						'is_last' => false,
+						'level' => 0,
+						'active_button' => 0
+						),
+					),
+				'page' => array(
+					'markAsRead' => array(
+						'title' => 'Mark As Read',
+						'href' => $scripturl . '?action=markasread;sa=all',
+						'show' => 1,
+						'target' => '_self',
+						'sub_buttons' => array(),
+						'is_last' => false,
+						'level' => 0,
+						'active_button' => 0
+						),
+					),
+				),
 			'icons' => array(
 				'approvemembers' => array(
 					'title' => 'Approve Members',
@@ -196,8 +314,8 @@ function template_body_above()
 			'quickLoginDescription' => $txt['quick_login_dec'],
 			'search' => $txt['search'],
 			'news' => $txt['news'],
-			),
-		);
+		),
+	);
 
 	$vm['txt']['approvalMessagePrefix'] = ($vm['content']['unapprovedMemberCount'] == 1) ? $txt['approve_thereis'] : $txt['approve_thereare'];
 	$vm['txt']['approvalMessageCount'] = ($vm['content']['unapprovedMemberCount'] == 1) ? $txt['approve_member'] : ($context['unapproved_members'] . ' ' . $txt['approve_members']);
@@ -208,24 +326,24 @@ function template_body_above()
 		$shown_linktree = true;
 	}
 
-	unset($vm['context']['menu'][1]);
-	unset($vm['context']['menu'][2]);
-	unset($vm['context']['menu'][6]);
-	unset($vm['context']['menu'][7]);
-	unset($vm['context']['menu'][8]);
-	unset($vm['context']['menu'][10]);
+	// unset($vm['context']['menu'][1]);
+	// unset($vm['context']['menu'][2]);
+	// unset($vm['context']['menu'][6]);
+	// unset($vm['context']['menu'][7]);
+	// unset($vm['context']['menu'][8]);
+	// unset($vm['context']['menu'][10]);
 
-	unset($vm['context']['icons'][1]);
-	unset($vm['context']['icons'][2]);
-	unset($vm['context']['icons'][6]);
-	unset($vm['context']['icons'][7]);
-	unset($vm['context']['icons'][8]);
-	unset($vm['context']['icons'][10]);
+	// unset($vm['context']['icons'][1]);
+	// unset($vm['context']['icons'][2]);
+	// unset($vm['context']['icons'][6]);
+	// unset($vm['context']['icons'][7]);
+	// unset($vm['context']['icons'][8]);
+	// unset($vm['context']['icons'][10]);
 
-	ob_start();
-	print_r($vm);
-	$vm['debug']= ob_get_contents();
-	ob_end_clean();
+	// ob_start();
+	// print_r($context['menu_buttons']);
+	// $vm['debug']= ob_get_contents();
+	// ob_end_clean();
 
 	// ob_start();
 	// theme_linktree();
